@@ -1,0 +1,67 @@
+/*
+Theme Name:     Twenty Eleven Child with Sidebar Support
+Theme URI:      http://futurewebblog.com/add-sidebar-support-posts-twenty-eleven-theme/
+Description:    Child theme for the Twenty Eleven which includes support for sidebars on posts
+Author:         Chris Aprea
+Template:       twentyeleven
+Version:        1.1
+*/
+
+/* We must first include the original css from the parent theme */
+@import url("../twentyeleven/style.css");
+
+/* Spoiler CSS (courtesy of Steffen Franskoch)
+ * http://codesnipp.it/css/pure-css-spoiler-tag
+----------------------------------------------- */
+div.spoiler {
+	border:1px solid black;
+	width:80%;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+
+div.spoiler div.view-protection {
+	background-color:#888;
+	width:100%;
+	height:50%;
+	position:absolute;
+	left:0;
+	z-index:100; 
+	-webkit-transition:1s 0s;
+	-moz-transition:1s 0s;
+}
+
+div.spoiler div.view-protection.top {
+	top:0; 
+	border-bottom:1px solid black;
+}
+
+div.spoiler div.view-protection.bottom {
+	bottom:0;
+	border-top:1px solid black;
+}
+
+div.spoiler:hover div.view-protection {
+	-webkit-transition:1s 1s;
+	-moz-transition:1s 1s; 
+}
+
+div.spoiler:hover div.view-protection.top {
+	top:-50%;
+}
+
+div.spoiler:hover div.view-protection.bottom {
+	bottom:-50%; 
+}
+
+.spoilers {
+	background: #000;
+	color: #000;
+}
+
+.spoilers_hover {
+	background: inherit;
+	color: inherit;
+	cursor: pointer;
+}
